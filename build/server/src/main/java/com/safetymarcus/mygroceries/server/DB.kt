@@ -1,6 +1,7 @@
 package com.safetymarcus.mygroceries.server
 
 import kotlinx.coroutines.Dispatchers
+import kotlinx.serialization.Serializable
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
 import org.jetbrains.exposed.dao.id.EntityID
@@ -8,6 +9,7 @@ import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Transaction
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 
+@Serializable
 data class Item(
     val name: String = "",
     val brand: String = "",

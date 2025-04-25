@@ -2,7 +2,7 @@ plugins {
     application
     alias(libs.plugins.jetbrains.kotlin.jvm)
     alias(libs.plugins.ktor)
-    kotlin("plugin.serialization") version "2.1.20"
+    alias(libs.plugins.serialization)
 }
 
 java {

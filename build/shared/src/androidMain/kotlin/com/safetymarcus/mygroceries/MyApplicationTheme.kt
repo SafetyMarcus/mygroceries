@@ -1,4 +1,4 @@
-package com.safetymarcus.mygroceries.android
+package com.safetymarcus.mygroceries
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

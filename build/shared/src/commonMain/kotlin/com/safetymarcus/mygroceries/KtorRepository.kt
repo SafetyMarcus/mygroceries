@@ -16,7 +16,7 @@ import kotlinx.serialization.json.Json
  * that automatically prepend the BASE_URL and use a shared HttpClient.
  */
 abstract class KtorRepository(
-    private val baseUrl: String = "http://localhost:8081",
+    private val baseUrl: String = "http://10.0.2.2:8081",
     private val httpClient: HttpClient = sharedHttpClient
 ) {
     companion object {

@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
 // --- Shared Model ---
-@Serializable
+@Serializable //TODO move server models out to shared module, reference across server and shared UIs
 data class Item(
     val name: String = "",
     val brand: String = "",

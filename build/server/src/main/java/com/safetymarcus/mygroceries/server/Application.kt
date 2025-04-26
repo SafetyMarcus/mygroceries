@@ -1,10 +1,12 @@
 package com.safetymarcus.mygroceries.server
 
 import io.ktor.server.application.Application
+import io.ktor.server.application.install
 import io.ktor.server.application.log
 import io.ktor.server.config.ApplicationConfigurationException
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.server.plugins.cors.routing.CORS
 import org.jetbrains.exposed.sql.Database
 
 fun main(args: Array<String>) {
@@ -16,6 +18,16 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module(args: Array<String>) {
+    install(CORS) {
+        allowHost("localhost:8082")
+        allowHeader(io.ktor.http.HttpHeaders.ContentType)
+        allowMethod(io.ktor.http.HttpMethod.Get)
+        allowMethod(io.ktor.http.HttpMethod.Post)
+        allowMethod(io.ktor.http.HttpMethod.Put)
+        allowMethod(io.ktor.http.HttpMethod.Delete)
+        allowCredentials = true // If you need to handle cookies or authorization headers
+        maxAgeInSeconds = 3600 // Optional: how long the preflight request can be cached
+    }
     apiRoutes()
     configureDatabases(args)
 }

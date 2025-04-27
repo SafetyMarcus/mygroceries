@@ -8,4 +8,5 @@ data class Item(
     val brand: String = "",
     val description: String = "",
     val size: String = "",
+    val volume: Int = 0,
 )

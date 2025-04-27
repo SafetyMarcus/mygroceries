@@ -8,7 +8,7 @@ interface ItemsRepository {
     suspend fun getAllItems(): List<Item>
 }
 
-class KtorItemsRepository : KtorRepository(), ItemsRepository {
+class ItemsRepositoryImplementation : KtorRepository(), ItemsRepository {
     override suspend fun getAllItems(): List<Item> {
         val response: HttpResponse = get("/items")
         return response.body()

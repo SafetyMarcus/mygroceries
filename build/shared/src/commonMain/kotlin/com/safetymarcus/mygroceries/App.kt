@@ -72,5 +72,5 @@ fun ItemsListScreen(viewModel: ItemsViewModel) {
 
 @Composable
 fun App() = AppTheme {
-    ItemsListScreen(viewModel = remember { ItemsViewModel(KtorItemsRepository()) })
+    ItemsListScreen(viewModel = remember { ItemsViewModel(ItemsRepositoryImplementation()) })
 }

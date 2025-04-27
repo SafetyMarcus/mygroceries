@@ -1,5 +1,6 @@
 package com.safetymarcus.mygroceries.server
 
+import com.safetymarcus.mygroceries.server.routes.apiRoutes
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpMethod
 import io.ktor.server.application.Application

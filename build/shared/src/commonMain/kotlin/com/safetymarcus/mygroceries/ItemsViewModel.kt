@@ -10,7 +10,7 @@ class ItemsViewModel(private val repository: ItemsRepository) {
     val items: StateFlow<List<Item>> = _items.asStateFlow()
 
     suspend fun onResume() {
-        val loaded = repository.getAllItems().sortedBy { it.name.lowercase() }
+        val loaded = repository.getAllItems().sortedByDescending { it.volume }
         _items.value = loaded
     }
 }

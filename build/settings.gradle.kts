@@ -19,3 +19,4 @@ rootProject.name = "My_Groceries"
 include(":androidApp")
 include(":shared")
 include(":server")
+include(":models")

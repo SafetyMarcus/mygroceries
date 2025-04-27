@@ -23,16 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.safetymarcus.mygroceries.theme.AppTheme
 import kotlinx.coroutines.launch
-import kotlinx.serialization.Serializable
 
-// --- Shared Model ---
-@Serializable //TODO move server models out to shared module, reference across server and shared UIs
-data class Item(
-    val name: String = "",
-    val brand: String = "",
-    val description: String = "",
-    val size: String = "",
-)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

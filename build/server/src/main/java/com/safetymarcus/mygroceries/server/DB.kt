@@ -1,21 +1,13 @@
 package com.safetymarcus.mygroceries.server
 
+import com.safetymarcus.mygroceries.models.Item
 import kotlinx.coroutines.Dispatchers
-import kotlinx.serialization.Serializable
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
 import org.jetbrains.exposed.dao.id.EntityID
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Transaction
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
-
-@Serializable
-data class Item(
-    val name: String = "",
-    val brand: String = "",
-    val description: String = "",
-    val size: String = "",
-)
 
 object ItemsTable : IntIdTable("items") {
     val name = varchar("name", 50)

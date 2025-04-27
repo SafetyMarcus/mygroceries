@@ -1,5 +1,6 @@
 package com.safetymarcus.mygroceries
 
+import com.safetymarcus.mygroceries.models.Item
 import io.ktor.client.call.body
 import io.ktor.client.statement.HttpResponse
 

@@ -1,5 +1,6 @@
 package com.safetymarcus.mygroceries.server
 
+import com.safetymarcus.mygroceries.models.Item
 import org.slf4j.LoggerFactory
 
 object ItemsRepository {

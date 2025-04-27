@@ -1,5 +1,6 @@
 package com.safetymarcus.mygroceries
 
+import com.safetymarcus.mygroceries.models.Item
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

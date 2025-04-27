@@ -25,6 +25,7 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":models"))
     implementation(libs.postgresql)
     implementation(libs.ktor.serialization.json)
     implementation(libs.ktor.server.config.yaml)

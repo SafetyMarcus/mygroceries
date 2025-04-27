@@ -1,5 +1,7 @@
 package com.safetymarcus.mygroceries.server
 
+import io.ktor.http.HttpHeaders
+import io.ktor.http.HttpMethod
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.application.log
@@ -20,13 +22,13 @@ fun main(args: Array<String>) {
 fun Application.module(args: Array<String>) {
     install(CORS) {
         allowHost("localhost:8082")
-        allowHeader(io.ktor.http.HttpHeaders.ContentType)
-        allowMethod(io.ktor.http.HttpMethod.Get)
-        allowMethod(io.ktor.http.HttpMethod.Post)
-        allowMethod(io.ktor.http.HttpMethod.Put)
-        allowMethod(io.ktor.http.HttpMethod.Delete)
-        allowCredentials = true // If you need to handle cookies or authorization headers
-        maxAgeInSeconds = 3600 // Optional: how long the preflight request can be cached
+        allowHeader(HttpHeaders.ContentType)
+        allowMethod(HttpMethod.Get)
+        allowMethod(HttpMethod.Post)
+        allowMethod(HttpMethod.Put)
+        allowMethod(HttpMethod.Delete)
+        allowCredentials = true
+        maxAgeInSeconds = 3600
     }
     apiRoutes()
     configureDatabases(args)

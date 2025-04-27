@@ -9,7 +9,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -22,6 +21,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.safetymarcus.mygroceries.theme.AppTheme
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 
@@ -80,8 +80,6 @@ fun ItemsListScreen(viewModel: ItemsViewModel) {
 }
 
 @Composable
-fun App() {
-    MaterialTheme {
-        ItemsListScreen(viewModel = remember { ItemsViewModel(KtorItemsRepository()) })
-    }
+fun App() = AppTheme {
+    ItemsListScreen(viewModel = remember { ItemsViewModel(KtorItemsRepository()) })
 }
